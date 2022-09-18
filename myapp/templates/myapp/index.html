@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Main Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/economia">Economia</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/deportes">Deportes</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/educacion">Educacion</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/entretenimiento">Entretenimiento</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/salud">Salud</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/ambiente">Ambiente</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/judicial">Judicial</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/tecnologia">tecnologia</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/politica">Politica</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/home/opinion">Opinion</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+	{% for obj in objs %}
+	
+	
+	<br>
+	<br>
+	<div class="card">
+	  <div class="card-body">
+	    <h5 class="card-title">{{obj.title}}</h5>
+	    <h6 class="card-subtitle mb-2 text-muted">{{obj.source}}</h6>
+	    <p>{{obj.date}}</p>
+	    <a href={{obj.url}} class="card-link">View</a>
+	  </div>
+	</div>
+	<br>
+	<br>
+
+	{% endfor %}
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
